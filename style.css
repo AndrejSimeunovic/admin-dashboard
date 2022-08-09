@@ -12,7 +12,9 @@ body {
     ;
     grid-template-columns: 1fr 5fr;
     background-color: #cbd5e1;
+    font-family: 'Roboto', sans-serif;
 }
+
 
 header {
     grid-area: header;
@@ -20,14 +22,33 @@ header {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     align-items: center;
-    background-color: aqua;
+    background-color: whitesmoke;
+    padding: 10px 25px;
+    row-gap: 20px;
+    font-weight: bold;
 }
 
 .searchBar {
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     gap: 10px;
 }
+
+
+/*header ul li, main ul li {
+    display: inline;
+ 
+}*/
+header ul,
+main ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 40px;
+    /*flex-wrap: wrap;*/
+    list-style: none;
+}
+
 
 #search {
     border-radius: .5em;
@@ -35,16 +56,95 @@ header {
     border: none;
     outline: none;
     padding: 4px;
-
+    width: 70%;
 }
 
-.menu ul li {
-    display: inline;
+/*.menu ul {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none; 
+}*/
+
+.menu img, .trending img {
+    width: 40px
 }
+
+button {
+    background-color: #2b64be;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+    padding: 10px;
+    width: 100px;
+    color: #f1f5f9;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about img {
+    width: 50px;
+
+}
+.about span:nth-of-type(1){
+    font-size: small;
+}
+.about span:nth-of-type(2){
+    font-size: larger;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
 
 nav {
     background-color: green;
     grid-area: nav;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10px;
+}
+
+.dashBoard-title,
+.navbar li,
+.configurations li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.dashBoard-title{
+    font-size: x-large;
+}
+
+.dashBoard-title .material-icons {
+    font-size: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+nav li:hover {
+    background-color: gray;
 }
 
 main {
@@ -59,36 +159,117 @@ main {
 }
 
 .projects {
-    background-color: red;
-    border: 1px solid yellow;
     grid-area: projects;
     display: flex;
     flex-direction: column;
 }
 
+.title {
+    margin-bottom: 10px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 30px;
 
 }
 
 .project {
-    border: 1px solid yellow;
+ 
+    height: auto;
+    padding: 20px;
+    border-left: 10px solid orange;
+    border-radius: .5em;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px grey;
+}
+.project-name {
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+.project-description {
+    margin-top: 5px;
+    color: gray;
+    font-weight: 400;
+}
+
+.project ul {
+    gap: 30px; 
+    margin-top: 50px;   
+    
+}
+
+
+.project .material-icons-two-tone {
+    text-decoration: none;
+
 }
 
 .sidebar {
-    border: 1px solid red;
     grid-area: sidebar;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 40px;
 }
 
-.announcements {
-    background-color: yellow;
+
+.announcement-box {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: .5em;
 }
 
-.trendings {
-    background-color: yellowgreen;
+.announcement {
+    border-bottom: 1px solid grey;
+}
+.announcement-name {
+    font-weight: bold;
+}
+
+.announcement-text {
+    padding: 5px 0 15px 0;
+    color: gray;
+    font-weight: 400;
+
+}
+
+.announcement:last-of-type {
+    border: none;
+}
+
+.trending-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: .5em;
+}
+
+.trending .text span:nth-of-type(2) {
+    color: gray;
+    font-weight: 400;
+    font-size: smaller;
+    margin-top: 5px;
+}
+.trending .text span:nth-of-type(1) {
+    font-size: larger;
+}
+
+
+.trending .text {
+  margin-left: 10px;
+
 }
