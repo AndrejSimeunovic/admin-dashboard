@@ -5,12 +5,15 @@
 }
 
 body {
+    min-height: 100vh;
+    min-width: 100wh;
     display: grid;
     grid-template-areas:
         'nav header'
         'nav main'
     ;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: 150px 4fr;
     background-color: #cbd5e1;
     font-family: 'Roboto', sans-serif;
 }
@@ -30,22 +33,16 @@ header {
 
 .searchBar {
     display: flex;
-    /*align-items: center;*/
     gap: 10px;
 }
 
 
-/*header ul li, main ul li {
-    display: inline;
- 
-}*/
 header ul,
 main ul {
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 40px;
-    /*flex-wrap: wrap;*/
     list-style: none;
 }
 
@@ -59,19 +56,13 @@ main ul {
     width: 70%;
 }
 
-/*.menu ul {
-    display: flex;
-    justify-content: end;
-    gap: 20px;
-    flex-wrap: wrap;
-    list-style: none; 
-}*/
 
-.menu img, .trending img {
+.menu img,
+.trending img {
     width: 40px
 }
 
-button {
+.btn {
     background-color: #2b64be;
     border: none;
     border-radius: 1.5em;
@@ -81,7 +72,7 @@ button {
     color: #f1f5f9;
 }
 
-button:hover {
+.btn:hover {
     background-color: blue;
 }
 
@@ -95,10 +86,12 @@ button:hover {
     width: 50px;
 
 }
-.about span:nth-of-type(1){
+
+.about span:nth-of-type(1) {
     font-size: small;
 }
-.about span:nth-of-type(2){
+
+.about span:nth-of-type(2) {
     font-size: larger;
 }
 
@@ -130,7 +123,8 @@ nav {
     gap: 20px;
     margin-bottom: 10px;
 }
-.dashBoard-title{
+
+.dashBoard-title {
     font-size: x-large;
 }
 
@@ -143,6 +137,7 @@ nav a {
     color: white;
     font-size: larger;
 }
+
 nav li:hover {
     background-color: gray;
 }
@@ -178,7 +173,7 @@ main {
 }
 
 .project {
- 
+
     height: auto;
     padding: 20px;
     border-left: 10px solid orange;
@@ -186,6 +181,7 @@ main {
     background-color: whitesmoke;
     box-shadow: 5px 5px 5px grey;
 }
+
 .project-name {
     font-weight: bold;
     font-size: larger;
@@ -199,9 +195,9 @@ main {
 }
 
 .project ul {
-    gap: 30px; 
-    margin-top: 50px;   
-    
+    gap: 30px;
+    margin-top: 50px;
+
 }
 
 
@@ -233,6 +229,7 @@ main {
 .announcement {
     border-bottom: 1px solid grey;
 }
+
 .announcement-name {
     font-weight: bold;
 }
@@ -264,12 +261,13 @@ main {
     font-size: smaller;
     margin-top: 5px;
 }
+
 .trending .text span:nth-of-type(1) {
     font-size: larger;
 }
 
 
 .trending .text {
-  margin-left: 10px;
+    margin-left: 10px;
 
 }

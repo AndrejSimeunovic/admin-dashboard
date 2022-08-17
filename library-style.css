@@ -1,0 +1,110 @@
+main {
+    grid-template-columns: 1fr;
+}
+
+.options {
+    display: flex;
+    justify-content: end;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-part-section:nth-of-type(1) {
+    text-align: center;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.modal {
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-body {
+    position: relative;
+    padding: 30px;
+}
+
+
+.form-title {
+    justify-self: center;
+}
+
+.close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 2px;
+
+
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+}
+
+.form-title {
+    justify-self: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+
+form button {
+    justify-self: center;
+}
+
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.delete {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}

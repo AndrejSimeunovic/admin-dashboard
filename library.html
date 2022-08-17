@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="library-style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="searchBar">
+            <span class="material-icons">search</span>
+            <input type="text" id="search">
+
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li class="material-icons">notifications_active</li>
+                <li><img src="/images/demon-slayer.png" alt="profile-pic"></li>
+                <li>Andrej Simeunovic</li>
+            </ul>
+        </div>
+
+        <div class="about">
+            <img src="/images/demon-slayer.png" alt="profile-pic">
+            <div class="text">
+                <span>Hi there,</span>
+                <span>Andrej Simeunovic (@andrej)</span>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <ul>
+                <li><button data-modal-target="#modal" class="btn">New</button></li>
+                <li><button class="btn">Upload</button></li>
+                <li><button class="btn">Share</button></li>
+            </ul>
+
+        </div>
+
+
+    </header>
+
+    <nav>
+        <div class="dashBoard-title">
+            <span class="material-icons">dashboard</span>
+            <span>Dashboard</span>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <span class="material-icons">home</span>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <span class="material-icons">person</span>
+                    <a href="#">Profile</a>
+                </li>
+                <li>
+                    <span class="material-icons">mode_comment</span>
+                    <a href="#">Messages</a>
+                </li>
+                <li>
+                    <span class="material-icons">local_library</span>
+                    <a href="library.html">Library</a>
+                </li>
+                <li>
+                    <span class="material-icons">history</span>
+                    <a href="#">History</a>
+                </li>
+                <li>
+                    <span class="material-icons">task</span>
+                    <a href="#">Tasks</a>
+                </li>
+                <li>
+                    <span class="material-icons">groups</span>
+                    <a href="#">Communities</a>
+                </li>
+            </ul>
+        </div>
+        <div class="configurations">
+            <ul>
+                <li>
+                    <span class="material-icons">settings</span>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <span class="material-icons">help_center</span>
+                    <a href="#">Support</a>
+                </li>
+                <li>
+                    <span class="material-icons">verified_user</span>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="modal" id="modal">
+            <div class="modal-body">
+
+                    <button data-close-button class="close-button">&times;</button>
+
+                <form>
+                    <div class="form-title">Add book</div>
+                    <div>
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+                    <div>
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+                    <div>
+
+                        <label for="pages">Pages</label>
+                        <input type="number" id="pages" name="pages" min="0" required>
+                    </div>
+                    <div>
+                        <label for="read">Read</label>
+                        <input type="checkbox" id="read" name="read">
+                    </div>
+                    <button data-submit-button type="submit" class="btn">Add</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="overlay"></div>
+
+        <div class="projects">
+            <div class="title">Your Books</div>
+
+            <div class="projects-grid">
+               <!--  <div class="project">
+                    <div class="project-box">
+                        <div class="options">
+                            <button class="edit">edit</button>
+                            <button class="delete">&times;</button>
+                        </div>
+                        <div class="book">
+                            <div class="book-part-section">
+                                <span>Title:</span>
+                                <span class="book-title">Game Of Thrones</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Author:</span>
+                                <span class="book-author">G.G Martin</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Pages:</span>
+                                <span class="book-pages">300</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Read:</span>
+                                <input type="checkbox" name="read" id="read">
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li><a href="#" class="material-icons-two-tone">favorite</a></li>
+                            <li><a href="#" class="material-icons-two-tone">visibility</a></li>
+                            <li><a href="#" class="material-icons-two-tone">share</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-box">
+                        <div class="options">
+                            <button class="edit">edit</button>
+                            <button class="delete">&times;</button>
+                        </div>
+                        <div class="book">
+                            <div class="book-part-section">
+                                <span>Title:</span>
+                                <span class="book-title">Batman</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Author:</span>
+                                <span class="book-author">Christpher Nolan</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Pages:</span>
+                                <span class="book-pages">100</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Read:</span>
+                                <input type="checkbox" name="read" id="read">
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li><a href="#" class="material-icons-two-tone">favorite</a></li>
+                            <li><a href="#" class="material-icons-two-tone">visibility</a></li>
+                            <li><a href="#" class="material-icons-two-tone">share</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-box">
+                        <div class="options">
+                            <button class="edit">edit</button>
+                            <button class="delete">&times;</button>
+                        </div>
+                        <div class="book">
+                            <div class="book-part-section">
+                                <span>Title:</span>
+                                <span class="book-title">Spiderman</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Author:</span>
+                                <span class="book-author">Kevin Feige</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Pages:</span>
+                                <span class="book-pages">200</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Read:</span>
+                                <input type="checkbox" name="read" id="read">
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li><a href="#" class="material-icons-two-tone">favorite</a></li>
+                            <li><a href="#" class="material-icons-two-tone">visibility</a></li>
+                            <li><a href="#" class="material-icons-two-tone">share</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-box">
+                        <div class="options">
+                            <button class="edit">edit</button>
+                            <button class="delete">&times;</button>
+                        </div>
+                        <div class="book">
+                            <div class="book-part-section">
+                                <span>Title:</span>
+                                <span class="book-title">Star Wars</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Author:</span>
+                                <span class="book-author">George Lucas</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Pages:</span>
+                                <span class="book-pages">500</span>
+                            </div>
+                            <div class="book-part-section">
+                                <span>Read:</span>
+                                <input type="checkbox" name="read" id="read">
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li><a href="#" class="material-icons-two-tone">favorite</a></li>
+                            <li><a href="#" class="material-icons-two-tone">visibility</a></li>
+                            <li><a href="#" class="material-icons-two-tone">share</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
